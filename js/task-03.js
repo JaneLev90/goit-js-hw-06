@@ -13,13 +13,34 @@ const images = [
   },
 ];
 
-const gallery = images
-   .map((item) => `<li class="gallery__item">${item}
-   <img src = ${images.url} 
-    alt = ${images.alt}></li>`)
-   .join("");
+const makeImageItem = ({url, alt}) => {
+  const listEl = document.createElement('li');
+listEl.classList.add('gallery__item');
 
- console.log (gallery);
+const imageEl = document.createElement('img');
+imageEl.classList.add('gallery__img');
+imageEl.src = url;
+imageEl.alt = alt;
+
+listEl.append(imageEl);
+return listEl;
+}
+
+const items = images.map(makeImageItem);
+console.log (items);
+
+const itemsContainer = document.querySelector('.gallery');
+itemsContainer.append(...items);
+//itemsContainer.insertAdjacentHTML("beforeend", items);
+
+
+// const gallery = images
+//    .map((item) => `<li class="gallery__item">${item}
+//    <img class = "gallery__img" src = ${images.url} 
+//     alt = ${images.alt}></li>`)
+//    .join("");
+
+//  console.log (gallery);
   
-const listGallery = document.querySelector('.gallery');
-listGallery.insertAdjacentHTML("beforeend", gallery);
+// const listGallery = document.querySelector('.gallery');
+// listGallery.insertAdjacentHTML("beforeend", gallery);

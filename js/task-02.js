@@ -19,12 +19,11 @@ const ingredients = [
 
 const ingredientsEl = ingredients.map(item =>{
   const ingredient = document.createElement("li");
-//ingredient.textContent = ingredients[i]; 
   ingredient.textContent = item;
   ingredient.classList.add('item');
 
   return ingredient;
 })
-console.log (ingredientsEl);
+//console.log (ingredientsEl);
 const ingredientsList = document.querySelector('#ingredients');
 ingredientsList.appendChild(...ingredientsEl);

@@ -27,7 +27,7 @@ return listEl;
 }
 
 const items = images.map(makeImageItem);
-console.log (items);
+//console.log (items);
 
 const itemsContainer = document.querySelector('.gallery');
 itemsContainer.append(...items);

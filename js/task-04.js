@@ -1,14 +1,18 @@
+const decrementBtn = document.querySelector('.decrement');
+const incrementBtn = document.querySelector('.increment');
+const counter = document.querySelector('#value');
 
-const incrementBtn = document.querySelector('button');
-const decrementBtn = document.querySelector('button');
 
 incrementBtn.addEventListener('click', makePlus);
 decrementBtn.addEventListener('click', makeMinus);
-let counterValue = 0;
+
+let counterValue = counter.textContent;
+console.log (counterValue);
 
 function makePlus() {
-console.log ('+')
+    console.log (counterValue.textContent += 1);
 };
-function makeMinus () {
-    console.log ('-')
+function makeMinus() {
+    console.log('-')
+   // console.log (counterValue =- 1);
 };

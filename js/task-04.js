@@ -1,20 +1,19 @@
 
 const decrementBtn = document.querySelector('[data-action="decrement"]');
 const incrementBtn = document.querySelector('[data-action="increment"]');
-let counterValue = document.querySelector('#value');
+const output = document.querySelector('#value');
+
+let counterValue = 0;
 
 
-incrementBtn.addEventListener('click', makePlus);
-decrementBtn.addEventListener('click', makeMinus);
+incrementBtn.addEventListener('click', () => {
+   counterValue += 1;
+   output.textContent = counterValue;
+   console.log (counterValue);
+});
+decrementBtn.addEventListener('click', () => {
+   counterValue -= 1;
+   output.textContent = counterValue;
+   console.log (counterValue);
+});
 
-// counterValue.textContent = 5;
-// console.log (counterValue);
-
-function makePlus() {
-   console.log('+')
-   
-};
-function makeMinus() {
-    console.log('-')
-   // console.log (counterValue =- 1);
-};

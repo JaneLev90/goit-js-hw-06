@@ -1,15 +1,15 @@
-const inputEl = document.querySelector('span#name-output');
-inputEl.addEventListener('keypress', onInputKeypress);
+const inputEl = document.querySelector('#name-input');
+inputEl.addEventListener('input', onInputChange);
 
 
 const outputEl = document.querySelector('span#name-output');
 
 //let outputSpan = `Anonymous`;
 
-function onInputKeypress (event) {
+function onInputChange (event) {
     //outputEl.textContent = outputSpan;
     outputEl.textContent = event.currentTarget.value;
-    console.log (outputEl)
+    console.log (outputEl);
 }
 
 
